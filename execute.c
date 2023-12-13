@@ -1,13 +1,13 @@
 #include "monty.h"
 /**
 * execute - execute
-* @stack: stack
+* @head: head
 * @counter: counter
 * @file: file
 * @content: content
 * Return: int
 */
-int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
+int execute(char *content, stack_t **head, unsigned int counter, FILE *file)
 {
 	unsigned int i = 0;
 	char *op;
@@ -38,7 +38,7 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 	while (ot[i].opcode && op)
 	{
 		if (strcmp(op, ot[i].opcode) == 0)
-		{	ot[i].f(stack, counter);
+		{	ot[i].f(head, counter);
 			return (0);
 		}
 		i++;
@@ -48,7 +48,7 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 		fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
 		fclose(file);
 		free(content);
-		free_stack(*stack);
+		free_stack(*head);
 		exit(EXIT_FAILURE); 
 	}
 	return (1);
