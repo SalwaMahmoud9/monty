@@ -14,7 +14,6 @@ int main(int argc, char *argv[])
 	size_t size = 0;
 	ssize_t r_l = 1;
 	FILE *file;
-	
 
 	if (argc != 2)
 	{
