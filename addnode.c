@@ -14,9 +14,9 @@ void addnode(stack_t **sHead, int n)
 	x = *sHead;
 	node_N = malloc(sizeof(stack_t));
 	if (node_N == NULL)
-	{ 
+	{
 		printf("Error\n");
-		exit(0); 
+		exit(0);
 	}
 	if (x)
 		x->prev = node_N;
