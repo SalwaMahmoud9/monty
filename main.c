@@ -8,7 +8,7 @@ bus_t bus = {NULL, NULL, NULL, 0};
 */
 int main(int argc, char *argv[])
 {
-	char *cont;
+	char *con;
 	unsigned int count = 0;
 	stack_t *stk = NULL;
 	FILE *fl;
