@@ -1,19 +1,19 @@
 #include "monty.h"
 /**
- * swap - adds the top two elements of the stack.
- * @sHead: stack sHead
- * @lNumber: line_number
- * Return: no return
+ * swap - swap
+ * @sHead: stack Head
+ * @lNumber: line number
+ * Return: void
 */
 void swap(stack_t **sHead, unsigned int lNumber)
 {
-	stack_t *h;
+	stack_t *head2;
 	int len = 0, aux;
 
-	h = *sHead;
-	while (h)
+	head2 = *sHead;
+	while (head2)
 	{
-		h = h->next;
+		head2 = head2->next;
 		len++;
 	}
 	if (len < 2)
@@ -24,8 +24,8 @@ void swap(stack_t **sHead, unsigned int lNumber)
 		free_stack(*sHead);
 		exit(EXIT_FAILURE);
 	}
-	h = *sHead;
-	aux = h->n;
-	h->n = h->next->n;
-	h->next->n = aux;
+	head2 = *sHead;
+	aux = head2->n;
+	head2->n = head2->next->n;
+	head2->next->n = aux;
 }
