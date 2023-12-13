@@ -1,5 +1,4 @@
 #include "monty.h"
-bus_t bus = {NULL, NULL, NULL, 0};
 /**
 * main - main
 * @argc: argc
@@ -14,6 +13,7 @@ int main(int argc, char *argv[])
 	size_t size = 0;
 	ssize_t r_l = 1;
 	FILE *file;
+	bus_t bus = {NULL, NULL, NULL, 0};
 
 	if (argc != 2)
 	{
